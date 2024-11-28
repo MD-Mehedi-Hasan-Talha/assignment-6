@@ -1,0 +1,14 @@
+[
+  {
+    "heading": "LWS Kitchen",
+    "options": ["About us", "Careers", "Contact us", "Feedback"]
+  },
+  {
+    "heading": "Legal",
+    "options": ["Terms", "Conditions", "Cookies", "Copyright"]
+  },
+  {
+    "heading": "Follow",
+    "options": ["Facebook", "Twitter", "Instagram", "Youtube"]
+  }
+]
