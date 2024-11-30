@@ -31,8 +31,8 @@ export default function Blog({ recipeData }) {
       </p>
 
       <blockquote className="text-3xl font-bold italic text-center my-12 px-4">
-        "One cannot think well, love well, sleep well, if one has not dined
-        well."
+        &quot;One cannot think well, love well, sleep well, if one has not dined
+        well.&quot;
       </blockquote>
       <p className="text-center text-gray-600 mb-12">
         — Virginia Woolf, A Room of One&apos;s Own
