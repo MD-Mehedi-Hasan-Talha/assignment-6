@@ -22,7 +22,7 @@ export default function RecipePage({ params }) {
         <Blog recipeData={recipeData} />
       </article>
 
-      <YouMightAlsoLike />
+      <YouMightAlsoLike params={params} />
     </main>
   );
 }
