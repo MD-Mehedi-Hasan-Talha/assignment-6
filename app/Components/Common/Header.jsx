@@ -14,12 +14,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-orange-500">
+            <Link href="/categories" className="hover:text-orange-500">
               Categories
             </Link>
           </li>
           <li>
-            <Link href="/" className="hover:text-orange-500">
+            <Link href="/#latest" className="hover:text-orange-500">
               Latest Recipes
             </Link>
           </li>

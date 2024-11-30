@@ -1,27 +1,26 @@
 import Image from "next/image";
+import Link from "next/link";
 import Star from "../Icons/Star";
 
-export default function SuperDeliciousCard() {
+export default function SuperDeliciousCard({ recipe }) {
   return (
-    <div>
+    <Link href={`/${recipe.category_id}/${recipe.title}`}>
       <Image
         width={1000}
         height={1000}
-        src="/assets/thumbs/thumb-5.jpg"
-        alt="Chicken Meatball with Creamy Cheese"
+        src={`/assets/thumbs/${recipe.thumbnail}`}
+        alt={recipe.title}
         className="w-full h-[300px] object-cover rounded-lg mb-4"
       />
-      <h3 className="text-xl font-semibold mb-2">
-        Chicken Meatball with Creamy Cheese
-      </h3>
+      <h3 className="text-xl font-semibold mb-2">{recipe.title}</h3>
       <div className="flex items-center text-yellow-500 mb-2">
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        {Array(Math.round(recipe.rating.average_rating))
+          .fill(crypto.randomUUID())
+          .map((item) => (
+            <Star key={item} />
+          ))}
       </div>
-      <p className="text-gray-600">30 Minutes</p>
-    </div>
+      <p className="text-gray-600">{recipe.cooking_time}</p>
+    </Link>
   );
 }

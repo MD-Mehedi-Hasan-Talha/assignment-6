@@ -1,20 +1,16 @@
 import Image from "next/image";
 
-export default function Blog() {
+export default function Blog({ recipeData }) {
   return (
     <>
       <Image
         width={1000}
         height={1000}
-        src="/assets/single-banner.jpg"
+        src={`/assets/thumbs/${recipeData.thumbnail}`}
         alt="Cooking Image"
         className="w-full h-auto mb-8 rounded-lg"
       />
-      <p className="text-gray-600 mb-8">
-        One thing I learned living in the Catskills section of Brooklyn, NY was
-        how to cook a good Italian meal. Here is a recipe I created after having
-        this dish in a restaurant. Enjoy!
-      </p>
+      <p className="text-gray-600 mb-8">{recipeData.description}</p>
 
       <h2 className="text-3xl font-bold mb-4">Before you begin</h2>
       <p className="mb-8">

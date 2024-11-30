@@ -1,16 +1,23 @@
-export default function PopularCategoriesCard() {
+import Image from "next/image";
+import Link from "next/link";
+
+export default function PopularCategoriesCard({ category }) {
   return (
-    <div className="cursor-pointer text-center group">
-      <div className="overflow-hidden rounded-full mb-2 w-20 h-20 mx-auto">
-        <img
-          src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=100&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Breakfast"
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-        />
+    <Link href={`/${category.id}`}>
+      <div className="cursor-pointer text-center group">
+        <div className="overflow-hidden rounded-full mb-2 w-20 h-20 mx-auto">
+          <Image
+            width={100}
+            height={100}
+            src={`/assets${category.image}`}
+            alt={category.name}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+        <p className="transition-transform duration-300 group-hover:scale-105">
+          {category.name}
+        </p>
       </div>
-      <p className="transition-transform duration-300 group-hover:scale-105">
-        Breakfast
-      </p>
-    </div>
+    </Link>
   );
 }

@@ -1,6 +1,7 @@
+import { formatDate } from "@/utils/formatData";
 import Image from "next/image";
 
-export default function Author() {
+export default function Author({ recipeData }) {
   return (
     <div className="flex items-center space-x-4 mb-6">
       <Image
@@ -10,11 +11,13 @@ export default function Author() {
         alt="Author"
         className="w-8 h-8 rounded-full"
       />
-      <span className="text-gray-600">Tricia Albert</span>
+      <span className="text-gray-600">{recipeData.author}</span>
       <span className="text-gray-400">|</span>
-      <span className="text-gray-600">15 mins</span>
+      <span className="text-gray-600">{recipeData.cooking_time}</span>
       <span className="text-gray-400">|</span>
-      <span className="text-gray-600">12 Nov 2021</span>
+      <span className="text-gray-600">
+        {formatDate(recipeData.published_date)}
+      </span>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import recipes from "@/data/recipes.json";
 import HandPicked from "./Components/RootPage/HandPicked";
 import HeroArea from "./Components/RootPage/HeroArea";
 import LatestRecipes from "./Components/RootPage/LatestRecipes";
@@ -8,17 +9,17 @@ import SuperDelicious from "./Components/RootPage/SuperDelicious";
 export default function Home() {
   return (
     <main className="container mx-auto px-4 mt-[100px]">
-      <HeroArea />
+      <HeroArea recipes={recipes} />
 
-      <SuperDelicious />
+      <SuperDelicious recipes={recipes} />
 
-      <PopularCategories />
+      <PopularCategories recipes={recipes} />
 
       <Subscribe />
 
-      <HandPicked />
+      <HandPicked recipes={recipes} />
 
-      <LatestRecipes />
+      <LatestRecipes recipes={recipes} />
     </main>
   );
 }
