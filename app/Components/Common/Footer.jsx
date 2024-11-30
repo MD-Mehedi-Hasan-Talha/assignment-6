@@ -1,5 +1,6 @@
 import footerInfo from "@/data/footerInfo.json";
 import Link from "next/link";
+import { Instagram, Twitter, Youtube } from "../Icons/SocalMediaIcons";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -33,6 +34,23 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-200 flex justify-between items-center">
+          <p class="text-sm text-gray-600">
+            © 2020 LWS Kitchen - All rights reserved
+          </p>
+          <div class="flex space-x-4">
+            <Link href="#" class="text-gray-400 hover:text-orange-500">
+              <Twitter />
+            </Link>
+            <Link href="#" class="text-gray-400 hover:text-orange-500">
+              <Instagram />
+            </Link>
+            <Link href="#" class="text-gray-400 hover:text-orange-500">
+              <Youtube />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
