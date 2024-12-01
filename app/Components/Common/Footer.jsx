@@ -36,18 +36,18 @@ export default function Footer() {
             ))}
         </div>
 
-        <div class="mt-8 pt-8 border-t border-gray-200 flex justify-between items-center">
-          <p class="text-sm text-gray-600">
+        <div className="mt-8 pt-8 border-t border-gray-200 flex justify-between items-center">
+          <p className="text-sm text-gray-600">
             © 2020 LWS Kitchen - All rights reserved
           </p>
-          <div class="flex space-x-4">
-            <Link href="#" class="text-gray-400 hover:text-orange-500">
+          <div className="flex space-x-4">
+            <Link href="#" className="text-gray-400 hover:text-orange-500">
               <Twitter />
             </Link>
-            <Link href="#" class="text-gray-400 hover:text-orange-500">
+            <Link href="#" className="text-gray-400 hover:text-orange-500">
               <Instagram />
             </Link>
-            <Link href="#" class="text-gray-400 hover:text-orange-500">
+            <Link href="#" className="text-gray-400 hover:text-orange-500">
               <Youtube />
             </Link>
           </div>
